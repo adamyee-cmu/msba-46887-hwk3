@@ -67,7 +67,7 @@ if st.button("Predict sales", type="primary"):
     if rain_missing:
         rain_chance = 0      # some far-out dates have no rain probability yet
  
-    features = pd.DataFrame({"temperature": [temperature], "rain_chance": [rain_chance]})
+   features = pd.DataFrame({"temperature": [temperature], "precip_chance": [rain_chance]})
     prediction = max(0, model.predict(features)[0])
  
     # 3. Show the result
